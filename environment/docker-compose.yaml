@@ -1,0 +1,13 @@
+version: "3.8"
+
+name: kakei_app
+services:
+  core:
+    build:
+      args:
+        - DEPLOY_TARGET=/app/
+      context: ../../
+      dockerfile: environment/Dockerfile
+    tty: true
+    volumes:
+      - ../../:/app
